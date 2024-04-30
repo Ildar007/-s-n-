@@ -1,0 +1,18 @@
+<ng-container *ngIf="board$ | async as board">
+  <div
+    cdkDropList
+    [cdkDropListData]="board.tracks"
+    (cdkDropListDropped)="onTrackDrop($event)"
+    cdkDropListOrientation="horizontal"
+    class="board">
+    <app-track *ngFor="let track of board.tracks"
+               [track] = track
+               [board] = board
+               [boardIndex] = 0
+               cdkDrag
+    ></app-track>
+  </div>
+</ng-container>
+
+
+

@@ -1,0 +1,6 @@
+<app-alert></app-alert>
+<app-loader *ngIf="!(board$ | async)"></app-loader>
+<app-drawer>
+  <router-outlet></router-outlet>
+</app-drawer>
+
